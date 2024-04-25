@@ -45,6 +45,13 @@ export default defineConfig({
 					},
 					{
 						type: 'string',
+						name: 'author',
+						label: 'author',
+						required: true,
+						description: 'Name for the author of this article'
+					},
+					{
+						type: 'string',
 						label: 'description',
 						required: true,
 						name: 'description',
