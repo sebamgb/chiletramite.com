@@ -13,6 +13,7 @@
   env = {
     # Environment variables to set for your server
     PORT = "$PORT";
+    COREPACK_ENABLE_STRICT = 0;
   };
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
@@ -24,7 +25,7 @@
       # Runs when a workspace is first created
       onCreate = {
         # Example: install JS dependencies from NPM
-        npm-install = "npm install";
+        npm-install = "npm install yes";
       };
       # Runs when the workspace is (re)started
       onStart = {
@@ -40,7 +41,7 @@
         web = {
           #   # Example: run "npm run dev" with PORT set to IDX's defined port for previews,
           #   # and show it in IDX's web preview panel
-          command = [ "npm" "run" "dev" "--" "--datalayer-port" "$PORT" "-c" "\"astro dev\"" ];
+          command = [ "npm" "run" "start" "--" "--port" "$PORT" "--hostname" "0.0.0.0" ];
           manager = "web";
           #   env = {
           #     # Environment variables to set for your server
@@ -48,11 +49,7 @@
           #   };
           # };
         };
-        android = {
-          manager = "flutter";
-        };
       };
-
     };
   };
 }
