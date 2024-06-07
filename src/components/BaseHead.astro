@@ -24,10 +24,17 @@ import { AstroFont } from 'astro-font'
 ---
 
 <!-- Global Metadata -->
-<meta charset='utf-8' />
-<meta name='viewport' content='width=device-width,initial-scale=1' />
+<meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+<meta
+	name='viewport'
+	content='width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no,maximum-scale=1,minimum-scale=1'
+/>
 <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
 <meta name='generator' content={Astro.generator} />
+
+<!--- ie -->
+<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+<meta http-equiv='X-UA-Compatible' content='IE=7' />
 
 <!-- Canonical URL -->
 <link rel='canonical' href={canonicalURL} />
